@@ -1,0 +1,1903 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.23.0209.1653                               -->
+<workbook original-version='18.1' source-build='2022.4.1 (20224.23.0209.1653)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Balance Groups' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15000'>
+        <calculation class='tableau' formula='15000' />
+        <range granularity='5000' max='25000' min='5000' />
+      </column>
+      <column caption='Age Groups' datatype='integer' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='5'>
+        <calculation class='tableau' formula='5' />
+        <members>
+          <member value='1' />
+          <member value='5' />
+          <member value='10' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='P1-UK-Bank-Customers' inline='true' name='federated.08nrtv605fj5rl148n7zl07p9l9b' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='P1-UK-Bank-Customers' name='textscan.16m1xoo1jj1kiv1bl8p5a1oj0blx'>
+            <connection class='textscan' directory='D:/Tableau/UK Bank Customers' filename='P1-UK-Bank-Customers.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.16m1xoo1jj1kiv1bl8p5a1oj0blx' name='P1-UK-Bank-Customers.csv' table='[P1-UK-Bank-Customers#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Customer ID' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='string' name='Surname' ordinal='2' />
+            <column datatype='string' name='Gender' ordinal='3' />
+            <column datatype='integer' name='Age' ordinal='4' />
+            <column datatype='string' name='Region' ordinal='5' />
+            <column datatype='string' name='Job Classification' ordinal='6' />
+            <column datatype='string' name='Date Joined' ordinal='7' />
+            <column datatype='real' name='Balance' ordinal='8' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.16m1xoo1jj1kiv1bl8p5a1oj0blx' name='P1-UK-Bank-Customers.csv' table='[P1-UK-Bank-Customers#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Customer ID' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='string' name='Surname' ordinal='2' />
+            <column datatype='string' name='Gender' ordinal='3' />
+            <column datatype='integer' name='Age' ordinal='4' />
+            <column datatype='string' name='Region' ordinal='5' />
+            <column datatype='string' name='Job Classification' ordinal='6' />
+            <column datatype='string' name='Date Joined' ordinal='7' />
+            <column datatype='real' name='Balance' ordinal='8' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Surname</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Surname]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Surname</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Classification</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Classification]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Job Classification</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date Joined</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Date Joined]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Date Joined</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Balance]</local-name>
+            <parent-name>[P1-UK-Bank-Customers.csv]</parent-name>
+            <remote-alias>Balance</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Age]' peg='0' size-parameter='[Parameters].[Parameter 2]' />
+      </column>
+      <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='Balance (bin)' datatype='integer' name='[Balance (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='4' formula='[Balance]' peg='0' size-parameter='[Parameters].[Parameter 1]' />
+      </column>
+      <column datatype='real' name='[Balance]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Customer ID]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Job Classification]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Region]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='P1-UK-Bank-Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+      <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Job Classification]' derivation='None' name='[none:Job Classification:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Age (bin))' hidden='true' name='[Action (Age (bin))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Age (bin)]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Job Classification)' hidden='true' name='[Action (Job Classification)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Job Classification]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Region)' hidden='true' name='[Action (Region)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Region]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='D:/Tableau/UK Bank Customers/P1-UK-Bank-Customers.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='06/06/2023 09:39:46 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='P1-UK-Bank-Customers' increment-value='%null%' refresh-type='create' rows-inserted='4014' timestamp-start='2023-06-06 09:39:45.386' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4014</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>170</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Surname</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Surname]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Surname</remote-alias>
+              <ordinal>2</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>149</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>4</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>5</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Job Classification</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Job Classification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Job Classification</remote-alias>
+              <ordinal>6</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date Joined</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Date Joined]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date Joined</remote-alias>
+              <ordinal>7</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>333</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Balance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Balance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Balance</remote-alias>
+              <ordinal>8</ordinal>
+              <family>P1-UK-Bank-Customers.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4014</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Job Classification:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Blue Collar&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;White Collar&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+        <semantic-value key='[State].[Name]' value='%null%' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Balance Groups' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15000'>
+          <calculation class='tableau' formula='15000' />
+          <range granularity='5000' max='25000' min='5000' />
+        </column>
+        <column caption='Age Groups' datatype='integer' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='5'>
+          <calculation class='tableau' formula='5' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='P1-UK-Bank-Customers.csv' id='P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D'>
+            <properties context=''>
+              <relation connection='textscan.16m1xoo1jj1kiv1bl8p5a1oj0blx' name='P1-UK-Bank-Customers.csv' table='[P1-UK-Bank-Customers#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Customer ID' ordinal='0' />
+                  <column datatype='string' name='Name' ordinal='1' />
+                  <column datatype='string' name='Surname' ordinal='2' />
+                  <column datatype='string' name='Gender' ordinal='3' />
+                  <column datatype='integer' name='Age' ordinal='4' />
+                  <column datatype='string' name='Region' ordinal='5' />
+                  <column datatype='string' name='Job Classification' ordinal='6' />
+                  <column datatype='string' name='Date Joined' ordinal='7' />
+                  <column datatype='real' name='Balance' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard' type='sheet' worksheet='Map' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_BD1DE81B95DE48FA84730CF124002720]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard' type='sheet' worksheet='Distribution by Balance' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_C4520BBBAD8F4BFF8648E5F2B51584FB]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard' type='sheet' worksheet='Distribution by Age' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_C40C3DAAF2E744D6AA49BAEAAB906FC6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard' type='sheet' worksheet='Gender' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5_19E55518D7FE42FAAAA1CF03CF3835B6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard' type='sheet' worksheet='Job Classification' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Distribution by Age'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='P1-UK-Bank-Customers' name='federated.08nrtv605fj5rl148n7zl07p9l9b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Age Groups' datatype='integer' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='5'>
+              <calculation class='tableau' formula='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.08nrtv605fj5rl148n7zl07p9l9b'>
+            <column aggregation='None' caption='Age (bin)' datatype='integer' name='[Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Age]' peg='0' size-parameter='[Parameters].[Parameter 2]' />
+            </column>
+            <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Job Classification]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='P1-UK-Bank-Customers.csv' datatype='integer' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='P1-UK-Bank-Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Age (bin)]' derivation='None' name='[none:Age (bin):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]'>
+            <groupfilter function='member' level='[Job Classification]' member='&quot;Other&quot;' user:ui-action-filter='[Action5_19E55518D7FE42FAAAA1CF03CF3835B6]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+            <groupfilter function='level-members' level='[Region]' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]</column>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' scope='rows' value='% of Customers' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</rows>
+        <cols>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Age (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{3944C4AF-6FA9-4BD1-9359-3375768FE0CB}' />
+    </worksheet>
+    <worksheet name='Distribution by Balance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='P1-UK-Bank-Customers' name='federated.08nrtv605fj5rl148n7zl07p9l9b' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Balance Groups' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15000'>
+              <calculation class='tableau' formula='15000' />
+              <range granularity='5000' max='25000' min='5000' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.08nrtv605fj5rl148n7zl07p9l9b'>
+            <column aggregation='None' caption='Balance (bin)' datatype='integer' name='[Balance (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='4' formula='[Balance]' peg='0' size-parameter='[Parameters].[Parameter 1]' />
+            </column>
+            <column datatype='real' name='[Balance]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Job Classification]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='P1-UK-Bank-Customers.csv' datatype='integer' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='P1-UK-Bank-Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Balance (bin)]' derivation='None' name='[none:Balance (bin):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]'>
+            <groupfilter function='member' level='[Job Classification]' member='&quot;Other&quot;' user:ui-action-filter='[Action5_19E55518D7FE42FAAAA1CF03CF3835B6]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+            <groupfilter function='level-members' level='[Region]' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]</column>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' scope='rows' value='% of Customers' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Balance (bin):ok]' value='N' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</rows>
+        <cols>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Balance (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Balance (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{4631B402-24C4-4BC1-97BC-272C955417D0}' />
+    </worksheet>
+    <worksheet name='Gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='P1-UK-Bank-Customers' name='federated.08nrtv605fj5rl148n7zl07p9l9b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08nrtv605fj5rl148n7zl07p9l9b'>
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Job Classification]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='P1-UK-Bank-Customers.csv' datatype='integer' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='P1-UK-Bank-Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]'>
+            <groupfilter function='member' level='[Job Classification]' member='&quot;Other&quot;' user:ui-action-filter='[Action5_19E55518D7FE42FAAAA1CF03CF3835B6]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+            <groupfilter function='level-members' level='[Region]' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]</column>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' value='196' />
+            <format attr='width' value='229' />
+            <format attr='border-color' value='#000000' />
+            <format attr='text-align' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' value='center' />
+            <format attr='text-format' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' value='p0%' />
+            <format attr='text-format' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' value='p0%' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-color' data-class='subtotal' value='#333333' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Gender:nk]' />
+              <wedge-size column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+              <size column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+              <text column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CC3203A3-D62D-4D11-9679-2475F0BD32DC}' />
+    </worksheet>
+    <worksheet name='Job Classification'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='P1-UK-Bank-Customers' name='federated.08nrtv605fj5rl148n7zl07p9l9b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08nrtv605fj5rl148n7zl07p9l9b'>
+            <column datatype='string' name='[Job Classification]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='P1-UK-Bank-Customers.csv' datatype='integer' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='P1-UK-Bank-Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Job Classification]' derivation='None' name='[none:Job Classification:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+            <groupfilter function='level-members' level='[Region]' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='271' />
+            <format attr='height' value='202' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='10' />
+            <format attr='text-format' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+              <color column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Job Classification:nk]' />
+              <text column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Job Classification:nk]' />
+              <text column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{66834D42-20A2-4019-9FEA-4FC1F2B7B2FE}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='P1-UK-Bank-Customers' name='federated.08nrtv605fj5rl148n7zl07p9l9b' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.08nrtv605fj5rl148n7zl07p9l9b'>
+            <column datatype='string' name='[Job Classification]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='P1-UK-Bank-Customers.csv' datatype='integer' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Region]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='P1-UK-Bank-Customers.csv' datatype='table' name='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]'>
+            <groupfilter function='member' level='[Job Classification]' member='&quot;Other&quot;' user:ui-action-filter='[Action5_19E55518D7FE42FAAAA1CF03CF3835B6]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Job Classification)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Longitude (generated)]' field-type='quantitative' max='1803861.6970983027' min='-2719206.0927352048' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Latitude (generated)]' field-type='quantitative' max='8909999.6976752318' min='6264501.1940391278' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]' value='Region'>
+              <formatted-text>
+                <run bold='true' fontsize='11'>Region</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]' />
+              <text column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' />
+              <geometry column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Latitude (generated)]</rows>
+        <cols>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Longitude (generated)]</cols>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{9E50547A-05E7-4B8D-8E61-3ADD3D4503C6}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Balance Groups' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='15000'>
+          <calculation class='tableau' formula='15000' />
+          <range granularity='5000' max='25000' min='5000' />
+        </column>
+        <column caption='Age Groups' datatype='integer' name='[Parameter 2]' param-domain-type='list' role='measure' type='quantitative' value='5'>
+          <calculation class='tableau' formula='5' />
+          <members>
+            <member value='1' />
+            <member value='5' />
+            <member value='10' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='70100' x='800' y='1000'>
+              <zone h='98000' id='3' name='Map' w='35050' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='14' name='Distribution by Age' w='35050' x='35850' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='16' name='Distribution by Balance' w='35050' x='35850' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='283' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='28300' x='70900' y='1000'>
+              <zone fixed-size='76' h='10500' id='8' is-fixed='true' name='Map' pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]' type-v2='color' w='28300' x='70900' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone custom-title='true' fixed-size='54' h='7750' id='12' is-fixed='true' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='28300' x='70900' y='11500'>
+                <formatted-text>
+                  <run bold='true' fontsize='11'>Age Groups</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone custom-title='true' fixed-size='61' h='8625' id='13' is-fixed='true' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='28300' x='70900' y='19250'>
+                <formatted-text>
+                  <run bold='true' fontsize='11'>Balance Groups</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='250' h='32250' id='9' is-fixed='true' name='Gender' w='28300' x='70900' y='27875'>
+                <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='525' h='38875' id='15' is-fixed='true' name='Job Classification' w='28300' x='70900' y='60125'>
+                <layout-cache fixed-size-w='271' type-h='cell' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='40' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='39' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Map' w='35050' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='76' h='10500' id='8' name='Map' pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]' type-v2='color' w='28300' x='70900' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='16' is-fixed='true' name='Distribution by Balance' w='35050' x='35850' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' fixed-size='54' h='7750' id='12' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='28300' x='70900' y='11500'>
+                  <formatted-text>
+                    <run bold='true' fontsize='11'>Age Groups</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' fixed-size='61' h='8625' id='13' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='28300' x='70900' y='19250'>
+                  <formatted-text>
+                    <run bold='true' fontsize='11'>Balance Groups</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='250' h='32250' id='9' is-fixed='true' name='Gender' w='28300' x='70900' y='27875'>
+                  <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='14' is-fixed='true' name='Distribution by Age' w='35050' x='35850' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38875' id='15' is-fixed='true' name='Job Classification' w='28300' x='70900' y='60125'>
+                  <layout-cache fixed-size-w='271' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4C712046-A134-40B6-ABF8-2AA3DBEC018E}' />
+    </dashboard>
+    <dashboard name='Story' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='7' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+              <zone fixed-size='122' h='12656' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='830' />
+              <zone h='85684' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='13486'>
+                <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                  <story-points>
+                    <story-point caption='This is the Bank&apos;s Customer Baseline' captured-sheet='Dashboard' id='1' />
+                    <story-point caption='England is mostly represented by White Collar Workers (70%)' captured-sheet='Dashboard' id='2'>
+                      <capturedDeltas>
+                        <worksheet name='Distribution by Age'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;England&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Distribution by Balance'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;England&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Gender'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;England&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Job Classification'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;England&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Map'>
+                          <selection-collection>
+                            <tuple-selection>
+                              <tuple-reference>
+                                <tuple-descriptor>
+                                  <pane-descriptor>
+                                    <x-fields>
+                                      <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Longitude (generated)]</field>
+                                    </x-fields>
+                                    <y-fields>
+                                      <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Latitude (generated)]</field>
+                                    </y-fields>
+                                  </pane-descriptor>
+                                  <columns>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Geometry (generated)]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Latitude (generated)]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Longitude (generated)]</field>
+                                  </columns>
+                                </tuple-descriptor>
+                                <tuple>
+                                  <value>314</value>
+                                  <value>&quot;England&quot;</value>
+                                  <value>&quot;MULTIPOLYGON(((-4.546 50.9284,-4.5497 50.9412,-4.533 50.9654,-4.5301 50.9974,-4.5337 51.01,-4.5134 51.0224,-4.4642 51.0206,-4.4253 51.0136,-4.3758 50.9903,-4.3438 50.9889,-4.3075 50.9954,-4.2545 51.0393,-4.2382 51.0414,-4.2264 51.0619,-4.1971 51.0579,-4.1905 51.0464,-4.2037 51.032,-4.1981 51.0212,-4.1983 51.033,-4.18 51.048,-4.1809 51.0663,-4.1531 51.0802,-4.129 51.0776,-4.118 51.0898,-4.0763 51.0768,-4.1072 51.0935,-4.1569 51.0855,-4.1844 51.0766,-4.1905 51.0649,-4.2177 51.0777,-4.2226 51.1178,-4.2427 51.1224,-4.2392 51.1333,-4.2606 51.1416,-4.2556 51.147,-4.2248 51.1442,-4.2122 51.1603,-4.2131 51.1898,-4.2012 51.2007,-4.1771 51.1976,-4.1207 51.2126,-4.066 51.2154,-4.0387 51.2067,-4.0277 51.2165,-3.9474 51.2217,-3.9387 51.2289,-3.9022 51.229,-3.8922 51.2241,-3.8719 51.2313,-3.8386 51.2349,-3.8069 51.2323,-3.7852 51.2464,-3.7645 51.237,-3.7208 51.2331,-3.6409 51.2229,-3.6227 51.2169,-3.5929 51.2225,-3.5789 51.2321,-3.5429 51.2324,-3.4793 51.2171,-3.4728 51.209,-3.444 51.2075,-3.4078 51.1829,-3.3364 51.1833,-3.277 51.1796,-3.2569 51.1877,-3.2162 51.1943,-3.2022 51.2015,-3.1809 51.1997,-3.1563 51.2082,-3.1258 51.2109,-3.0764 51.2014,-3.0546 51.2057,-3.0198 51.2188,-3.0322 51.1896,-3.0224 51.1973,-2.9993 51.2369,-3.0215 51.2649,-3.0117 51.3069,-3.0138 51.3235,-2.9929 51.3202,-2.9828 51.347,-2.9941 51.3572,-2.9651 51.3658,-2.9625 51.3823,-2.9792 51.3881,-2.9374 51.3981,-2.913 51.396,-2.8875 51.4152,-2.8784 51.4323,-2.849 51.4555,-2.8003 51.485,-2.7727 51.4948,-2.709 51.4969,-2.7161 51.5073,-2.7003 51.5173,-2.6738 51.5444,-2.6633 51.5738,-2.6426 51.587,-2.6278 51.6056,-2.5842 51.629,-2.5695 51.655,-2.5353 51.6776,-2.5091 51.686,-2.491 51.7062,-2.5139 51.708,-2.5484 51.6935,-2.5978 51.6792,-2.6231 51.6626,-2.6242 51.6521,-2.6474 51.6317,-2.6496 51.6105,-2.66 51.6182,-2.6569 51.6232,-2.6685 51.6338,-2.6687 51.6456,-2.6798 51.6488,-2.666 51.6627,-2.6799 51.6597,-2.6863 51.6624,-2.6847 51.668,-2.6601 51.6711,-2.6568 51.6743,-2.6713 51.6802,-2.6699 51.6942,-2.6833 51.7001,-2.6809 51.7033,-2.6702 51.701,-2.6693 51.7074,-2.6793 51.714,-2.6805 51.7241,-2.6859 51.732,-2.6726 51.736,-2.6629 51.753,-2.6725 51.7593,-2.6804 51.7685,-2.6751 51.7767,-2.6759 51.7881,-2.6696 51.7944,-2.6783 51.8033,-2.6726 51.8089,-2.6595 51.8107,-2.6609 51.8228,-2.6502 51.8261,-2.6575 51.8274,-2.659 51.8333,-2.6829 51.8385,-2.687 51.8331,-2.6934 51.8339,-2.6973 51.8448,-2.7051 51.8457,-2.7066 51.84,-2.7161 51.8407,-2.7197 51.8488,-2.7276 51.8401,-2.7388 51.8367,-2.7403 51.8416,-2.7568 51.846,-2.7689 51.8609,-2.778 51.865,-2.7769 51.8733,-2.7686 51.8801,-2.8025 51.8911,-2.8143 51.898,-2.8208 51.9052,-2.8364 51.9063,-2.8419 51.9177,-2.8621 51.9141,-2.8624 51.9175,-2.8464 51.92,-2.8589 51.9277,-2.8694 51.9269,-2.8757 51.9332,-2.8885 51.9336,-2.887 51.9282,-2.901 51.9258,-2.9082 51.9212,-2.9274 51.914,-2.9338 51.9151,-2.9426 51.9094,-2.9684 51.9045,-2.9753 51.9097,-2.9712 51.9134,-2.9767 51.9275,-2.9992 51.9235,-3.0081 51.9271,-3.0085 51.938,-3.0222 51.9509,-3.0259 51.9573,-3.0353 51.9597,-3.0414 51.9677,-3.0571 51.9754,-3.0674 51.9831,-3.0697 51.9898,-3.0842 52.0044,-3.087 52.014,-3.0992 52.0227,-3.0863 52.0402,-3.0908 52.0508,-3.1115 52.0649,-3.1163 52.0658,-3.126 52.0783,-3.1189 52.0888,-3.1227 52.1032,-3.1059 52.1051,-3.1067 52.1187,-3.1278 52.1245,-3.1368 52.1233,-3.1412 52.1299,-3.136 52.1378,-3.1154 52.1392,-3.0937 52.1443,-3.0725 52.1558,-3.0844 52.1631,-3.0989 52.1547,-3.1224 52.1634,-3.1125 52.1736,-3.0964 52.1809,-3.0964 52.1947,-3.1 52.2022,-3.0772 52.2132,-3.0721 52.2229,-3.0724 52.2319,-3.0635 52.2367,-3.0443 52.2379,-3.0483 52.245,-3.0207 52.2601,-3.0056 52.2642,-2.9775 52.2598,-2.9645 52.2628,-2.9651 52.2681,-2.956 52.2709,-2.9668 52.2738,-2.9943 52.2733,-3.0126 52.2793,-3.012 52.288,-3.0047 52.2917,-3.0006 52.3044,-3.0038 52.3116,-2.9971 52.3245,-2.986 52.3235,-2.9668 52.3295,-2.9549 52.3493,-2.9571 52.3524,-2.9704 52.3514,-2.9728 52.3541,-3.0045 52.3489,-3.0178 52.3489,-3.0275 52.3451,-3.0415 52.3442,-3.0543 52.3478,-3.0674 52.3575,-3.0845 52.3589,-3.0957 52.3641,-3.1049 52.3758,-3.1251 52.3809,-3.1319 52.3854,-3.1545 52.3877,-3.162 52.3936,-3.161 52.4,-3.1734 52.4071,-3.2091 52.4192,-3.2217 52.4221,-3.2308 52.4303,-3.2285 52.4396,-3.2356 52.4426,-3.2333 52.4513,-3.2184 52.4609,-3.212 52.4681,-3.1946 52.4764,-3.1815 52.474,-3.1578 52.4851,-3.1391 52.4918,-3.1285 52.492,-3.1125 52.4977,-3.0966 52.496,-3.0898 52.4992,-3.0443 52.5001,-3.0292 52.5013,-3.0366 52.5132,-3.0324 52.5237,-3.0038 52.5198,-3.0051 52.5295,-2.9978 52.548,-2.9977 52.5636,-3.0066 52.5739,-3.0145 52.5755,-3.0366 52.5717,-3.05 52.5607,-3.0604 52.5553,-3.0873 52.5513,-3.0939 52.5449,-3.0834 52.5415,-3.083 52.5359,-3.1084 52.5293,-3.135 52.5285,-3.1372 52.5339,-3.117 52.5384,-3.1115 52.5414,-3.1274 52.566,-3.1378 52.5739,-3.1393 52.586,-3.1192 52.5858,-3.1003 52.5976,-3.0894 52.5996,-3.0936 52.6093,-3.0827 52.6156,-3.0808 52.6224,-3.0731 52.629,-3.0598 52.6307,-3.0697 52.6375,-3.0817 52.6411,-3.0703 52.6457,-3.0511 52.6473,-3.0449 52.6559,-3.0486 52.663,-3.0385 52.6753,-3.0456 52.6754,-3.0427 52.6869,-3.047 52.6912,-3.0361 52.6925,-3.032 52.6999,-3.0225 52.7067,-3.0234 52.7198,-3.0084 52.722,-3.0005 52.7202,-2.9773 52.7263,-2.9781 52.7153,-2.9615 52.7156,-2.965 52.7322,-2.9711 52.7354,-2.9831 52.7334,-2.9965 52.736,-2.991 52.7431,-2.9978 52.7439,-3.0146 52.7528,-3.0106 52.7615,-3.0186 52.7675,-3.0221 52.7645,-3.039 52.7704,-3.0472 52.7671,-3.0573 52.7738,-3.0611 52.7694,-3.0695 52.7742,-3.0795 52.7716,-3.0807 52.7775,-3.0889 52.7776,-3.0915 52.7859,-3.0858 52.7903,-3.0902 52.7963,-3.0977 52.7914,-3.1062 52.7929,-3.1122 52.7858,-3.1311 52.7875,-3.1585 52.7935,-3.162 52.7988,-3.1541 52.8025,-3.1563 52.808,-3.1614 52.8036,-3.1684 52.808,-3.1678 52.8193,-3.1584 52.8302,-3.1513 52.8426,-3.1631 52.8475,-3.1539 52.8543,-3.1344 52.8618,-3.1277 52.8673,-3.1525 52.8797,-3.1468 52.8846,-3.1363 52.8862,-3.1475 52.8901,-3.1376 52.8949,-3.1136 52.8946,-3.1168 52.8994,-3.1097 52.9183,-3.096 52.9303,-3.0764 52.9255,-3.0615 52.9291,-3.0412 52.9279,-3.0315 52.9314,-3.0097 52.9562,-2.9904 52.9598,-2.982 52.9592,-2.975 52.969,-2.9685 52.9642,-2.9728 52.9605,-2.9618 52.9557,-2.9598 52.9512,-2.9273 52.9388,-2.9189 52.9436,-2.9087 52.942,-2.8965 52.9509,-2.8875 52.9525,-2.8837 52.9467,-2.8402 52.9419,-2.8384 52.9322,-2.8134 52.9151,-2.8005 52.8955,-2.7901 52.9033,-2.7554 52.9246,-2.7283 52.9252,-2.7257 52.9405,-2.7279 52.9536,-2.7266 52.9649,-2.7353 52.97,-2.7268 52.9833,-2.7457 52.9871,-2.7585 52.9861,-2.7682 52.9948,-2.7796 52.9934,-2.7899 52.9957,-2.7993 52.9896,-2.8324 52.9966,-2.838 53.0029,-2.8378 53.0106,-2.8479 53.019,-2.8586 53.0198,-2.8605 53.028,-2.8557 53.0373,-2.8701 53.0454,-2.8593 53.0543,-2.8725 53.0587,-2.8615 53.0608,-2.8808 53.074,-2.8759 53.0816,-2.9009 53.0908,-2.8993 53.098,-2.8933 53.0963,-2.8873 53.1046,-2.8911 53.1095,-2.8838 53.1115,-2.881 53.1213,-2.8923 53.1184,-2.9034 53.1118,-2.9173 53.1148,-2.9344 53.1215,-2.945 53.1223,-2.9465 53.1269,-2.9639 53.1328,-2.9795 53.1506,-2.9846 53.1478,-2.9951 53.1542,-2.9846 53.1586,-2.9815 53.1563,-2.9709 53.1608,-2.9466 53.1671,-2.944 53.1652,-2.9278 53.1714,-2.921 53.1771,-2.9223 53.1893,-2.9376 53.1979,-2.9492 53.2111,-2.9662 53.2187,-2.993 53.2332,-3.0259 53.2484,-3.0361 53.2518,-3.0691 53.253,-3.0786 53.252,-3.0833 53.2561,-3.101 53.2624,-3.0839 53.2795,-3.1094 53.2963,-3.12 53.3099,-3.1181 53.3221,-3.1624 53.3483,-3.1985 53.3757,-3.2004 53.3875,-3.1705 53.4023,-3.1002 53.4217,-3.0566 53.4401,-3.0365 53.4395,-3.0169 53.4117,-3.0067 53.3825,-2.9838 53.3622,-2.9496 53.3233,-2.9286 53.3082,-2.8784 53.2908,-2.84 53.2985,-2.8464 53.3069,-2.8218 53.3073,-2.7888 53.2967,-2.7524 53.3148,-2.7634 53.3276,-2.7538 53.3434,-2.7205 53.3445,-2.6995 53.3567,-2.6752 53.3545,-2.6934 53.3618,-2.7285 53.3545,-2.7324 53.3483,-2.7625 53.3488,-2.7787 53.3278,-2.7947 53.3222,-2.8267 53.3317,-2.855 53.3275,-2.9048 53.3456,-2.9159 53.3537,-2.9693 53.3758,-2.985 53.3865,-3.0024 53.4102,-3.0088 53.4384,-3.0213 53.4543,-3.041 53.465,-3.0403 53.4745,-3.0611 53.4991,-3.0668 53.5243,-3.1 53.5397,-3.1055 53.5515,-3.0975 53.5744,-3.0654 53.6065,-3.0312 53.6477,-3.0178 53.6542,-2.9771 53.6965,-2.9562 53.6975,-2.9353 53.7287,-2.9368 53.7321,-3.018 53.7394,-3.055 53.762,-3.0569 53.7766,-3.059 53.7906,-3.0546 53.8484,-3.048 53.8757,-3.0507 53.9181,-3.0448 53.9232,-3.006 53.9276,-3.0051 53.898,-2.9927 53.8851,-2.9759 53.8844,-2.9922 53.8964,-2.9954 53.9317,-2.9246 53.951,-2.9071 53.9408,-2.8824 53.9463,-2.8534 53.9657,-2.8733 53.9715,-2.8706 53.9903,-2.8521 54.0005,-2.831 54.0004,-2.8291 54.028,-2.8415 54.0223,-2.8386 54.0074,-2.8745 54.005,-2.8806 53.9897,-2.9002 53.992,-2.9057 54.0221,-2.9233 54.0335,-2.9062 54.0395,-2.8871 54.065,-2.8248 54.0884,-2.8275 54.0987,-2.8008 54.1159,-2.7975 54.1262,-2.8179 54.1218,-2.8391 54.1512,-2.8588 54.1536,-2.8695 54.1767,-2.8576 54.1798,-2.8641 54.192,-2.8258 54.204,-2.7944 54.2274,-2.8324 54.2191,-2.8425 54.2055,-2.8729 54.2026,-2.9058 54.1943,-2.9394 54.1567,-2.9684 54.146,-3.0043 54.1554,-3.0065 54.1723,-3.0348 54.1965,-3.0146 54.2068,-3.0352 54.2283,-3.0531 54.2208,-3.0324 54.2113,-3.0626 54.1786,-3.0609 54.162,-3.0781 54.1538,-3.0876 54.1363,-3.1081 54.1177,-3.1491 54.0935,-3.1733 54.0796,-3.1941 54.1043,-3.2262 54.0941,-3.2394 54.1043,-3.2442 54.1368,-3.237 54.1547,-3.2574 54.1659,-3.2172 54.1775,-3.2123 54.2085,-3.205 54.215,-3.1912 54.2318,-3.2141 54.2565,-3.229 54.2599,-3.225 54.2765,-3.2311 54.2612,-3.2256 54.2398,-3.251 54.2199,-3.2401 54.2033,-3.254 54.1916,-3.2806 54.1965,-3.2994 54.1884,-3.33 54.1963,-3.3649 54.2318,-3.3931 54.2535,-3.4198 54.2823,-3.4158 54.3026,-3.4243 54.327,-3.4123 54.3499,-3.4302 54.342,-3.4611 54.3647,-3.4865 54.3956,-3.5414 54.4384,-3.5632 54.4516,-3.593 54.4821,-3.6202 54.4913,-3.6389 54.5174,-3.6136 54.5251,-3.5809 54.5712,-3.5828 54.5909,-3.5726 54.6007,-3.5684 54.6131,-3.5786 54.6514,-3.568 54.6497,-3.5611 54.6625,-3.519 54.693,-3.5099 54.7176,-3.4633 54.7393,-3.4364 54.7597,-3.4316 54.7766,-3.4374 54.8026,-3.4106 54.8391,-3.3999 54.8674,-3.367 54.8915,-3.3388 54.9002,-3.3349 54.8923,-3.3095 54.8876,-3.2939 54.8792,-3.2876 54.8928,-3.2664 54.8916,-3.2554 54.9101,-3.2696 54.904,-3.2971 54.9073,-3.3025 54.917,-3.2898 54.9316,-3.2708 54.9407,-3.2111 54.9545,-3.1857 54.9497,-3.1397 54.9278,-3.1184 54.9279,-3.0735 54.9375,-3.0511 54.9532,-3.0845 54.9494,-3.0898 54.9564,-3.0672 54.9701,-3.0571 54.9857,-3.058 54.9917,-3.0446 54.9983,-3.0495 55.0094,-3.0399 55.0161,-3.0401 55.0226,-3.031 55.0244,-3.0343 55.0295,-3.0259 55.0365,-3.0403 55.0415,-3.0434 55.0474,-3.0508 55.0488,-3.0432 55.0556,-3.0212 55.0549,-2.9587 55.0493,-2.9554 55.0548,-2.9364 55.0596,-2.9426 55.0634,-2.9376 55.0704,-2.9262 55.0706,-2.9137 55.0791,-2.8968 55.078,-2.8933 55.0879,-2.886 55.0867,-2.8843 55.0955,-2.8771 55.0951,-2.8714 55.1056,-2.8585 55.1083,-2.8452 55.1115,-2.8268 55.126,-2.833 55.1326,-2.8255 55.1383,-2.8135 55.1363,-2.7906 55.14,-2.7749 55.1493,-2.7505 55.1567,-2.7338 55.1667,-2.7133 55.1721,-2.7052 55.1724,-2.6898 55.189,-2.6813 55.1986,-2.6833 55.2019,-2.6668 55.2216,-2.6481 55.2199,-2.6314 55.2237,-2.6358 55.2298,-2.6299 55.245,-2.612 55.2477,-2.6241 55.2495,-2.6468 55.2598,-2.6267 55.2622,-2.6282 55.2679,-2.6092 55.2832,-2.5734 55.2969,-2.5571 55.3116,-2.5593 55.3175,-2.5504 55.3158,-2.5431 55.3196,-2.5177 55.3247,-2.502 55.3372,-2.5023 55.3402,-2.4885 55.3518,-2.4734 55.3547,-2.4612 55.3532,-2.4447 55.3592,-2.4292 55.3564,-2.415 55.3589,-2.4009 55.3535,-2.3992 55.3482,-2.3789 55.3492,-2.3728 55.3551,-2.3549 55.3625,-2.3377 55.3674,-2.3462 55.3731,-2.3305 55.3812,-2.3346 55.383,-2.3355 55.3926,-2.3449 55.3993,-2.3341 55.4021,-2.3356 55.4082,-2.3133 55.4068,-2.3125 55.4099,-2.2963 55.4147,-2.2945 55.4205,-2.2839 55.4229,-2.2706 55.4296,-2.2622 55.4286,-2.2606 55.4329,-2.23 55.4306,-2.2056 55.4375,-2.1942 55.4453,-2.1844 55.4641,-2.1665 55.4675,-2.1737 55.4723,-2.201 55.475,-2.2064 55.4816,-2.2022 55.4882,-2.2119 55.4994,-2.2289 55.5101,-2.2243 55.5228,-2.2332 55.5296,-2.2322 55.5448,-2.2531 55.5614,-2.2701 55.5701,-2.2756 55.5752,-2.2855 55.5778,-2.2924 55.5858,-2.2881 55.5915,-2.2892 55.6038,-2.2951 55.6086,-2.3073 55.6111,-2.3161 55.6205,-2.3089 55.6225,-2.3086 55.6289,-2.3243 55.6262,-2.336 55.6321,-2.3273 55.6362,-2.325 55.643,-2.3021 55.6473,-2.2896 55.6436,-2.2758 55.6426,-2.259 55.6447,-2.2457 55.6396,-2.2342 55.6412,-2.2316 55.6447,-2.248 55.6523,-2.2342 55.658,-2.2304 55.6623,-2.2195 55.6638,-2.2187 55.6759,-2.2089 55.6806,-2.2054 55.6864,-2.1975 55.6887,-2.1912 55.6963,-2.1806 55.7033,-2.1672 55.706,-2.177 55.7184,-2.1689 55.7222,-2.1518 55.7225,-2.1478 55.7272,-2.1487 55.7365,-2.1387 55.7405,-2.1197 55.7379,-2.1157 55.7474,-2.1072 55.7479,-2.1097 55.7577,-2.0981 55.7627,-2.0856 55.7621,-2.0874 55.7708,-2.0861 55.793,-2.077 55.7941,-2.0622 55.8027,-2.0526 55.8025,-2.0344 55.8111,-1.9947 55.7797,-1.9912 55.7687,-2.0037 55.7618,-1.9608 55.7333,-1.8841 55.6945,-1.8741 55.6756,-1.8431 55.6442,-1.8132 55.6337,-1.7895 55.6468,-1.7647 55.6253,-1.7789 55.6149,-1.7649 55.6043,-1.7423 55.6186,-1.7238 55.6168,-1.6912 55.6056,-1.6646 55.586,-1.6461 55.5816,-1.6451 55.5715,-1.6228 55.5515,-1.6372 55.5409,-1.6108 55.5202,-1.6187 55.5145,-1.6146 55.4985,-1.592 55.4913,-1.5933 55.4402,-1.5754 55.4309,-1.5804 55.4067,-1.5878 55.4059,-1.6106 55.3846,-1.6015 55.3615,-1.5813 55.3379,-1.5494 55.3218,-1.5504 55.3109,-1.5688 55.2935,-1.5714 55.2779,-1.5512 55.2441,-1.5254 55.2267,-1.5241 55.2125,-1.499 55.1854,-1.5105 55.1847,-1.5251 55.1626,-1.5211 55.1497,-1.4987 55.1296,-1.4985 55.1111,-1.4887 55.0951,-1.4618 55.0743,-1.449 55.0513,-1.4318 55.0409,-1.4176 55.0141,-1.4312 55.0083,-1.3806 54.9856,-1.3608 54.9709,-1.3532 54.9576,-1.364 54.9441,-1.3671 54.9285,-1.3538 54.9077,-1.3616 54.8983,-1.3474 54.8606,-1.3229 54.8301,-1.3125 54.8112,-1.3085 54.7803,-1.2869 54.7567,-1.2428 54.7222,-1.1779 54.6992,-1.1984 54.6901,-1.1991 54.6808,-1.1834 54.6593,-1.1648 54.6476,-1.1639 54.6338,-1.1898 54.6304,-1.1648 54.6282,-1.1577 54.6098,-1.1522 54.6301,-1.1354 54.6296,-1.1389 54.641,-1.1184 54.6289,-1.0881 54.6208,-1.0518 54.6159,-1.02 54.5992,-0.9603 54.585,-0.9262 54.5867,-0.8992 54.5723,-0.8532 54.5718,-0.808 54.5585,-0.7923 54.5596,-0.7745 54.5574,-0.7509 54.5419,-0.7447 54.5285,-0.713 54.5336,-0.6733 54.5129,-0.6652 54.5006,-0.6067 54.4906,-0.5689 54.4797,-0.5569 54.4651,-0.5228 54.4478,-0.5317 54.4363,-0.5228 54.4163,-0.4917 54.408,-0.4717 54.397,-0.4498 54.3725,-0.4326 54.3401,-0.4171 54.3314,-0.417 54.3098,-0.4059 54.2921,-0.3845 54.286,-0.3977 54.2781,-0.3664 54.2527,-0.3639 54.2451,-0.3389 54.2427,-0.3132 54.2291,-0.2754 54.2177,-0.2852 54.2032,-0.2755 54.1848,-0.2261 54.1597,-0.2126 54.1576,-0.1727 54.1515,-0.1213 54.1331,-0.0996 54.1301,-0.0764 54.1164,-0.1037 54.1043,-0.1418 54.1041,-0.1673 54.0987,-0.1984 54.0779,-0.2135 54.0522,-0.2151 54.0238,-0.2083 53.9976,-0.1843 53.9517,-0.154 53.9011,-0.1195 53.8628,-0.0259 53.7805,0.0447 53.7216,0.1109 53.6685,0.125 53.6529,0.1433 53.6216,0.1445 53.6097,0.1247 53.6234,0.0752 53.6421,0.0294 53.6492,-0.0497 53.6321,-0.0538 53.629,-0.1035 53.6353,-0.1305 53.6493,-0.1754 53.6813,-0.2278 53.7091,-0.245 53.7364,-0.3072 53.742,-0.3365 53.7373,-0.3839 53.7245,-0.4192 53.7196,-0.4475 53.7139,-0.4867 53.7165,-0.5356 53.7091,-0.5532 53.7095,-0.5796 53.7216,-0.5949 53.7182,-0.6005 53.707,-0.5877 53.697,-0.5428 53.6785,-0.509 53.6796,-0.4705 53.6982,-0.4134 53.6981,-0.3295 53.7117,-0.2998 53.7145,-0.2754 53.705,-0.2522 53.6774,-0.2215 53.6512,-0.2001 53.6403,-0.1884 53.631,-0.1384 53.6073,-0.1118 53.5902,-0.0792 53.577,-0.0612 53.5823,-0.0342 53.5675,0.0173 53.5254,0.0381 53.5138,0.0708 53.5172,0.0896 53.494,0.1179 53.4932,0.1089 53.5043,0.1327 53.4964,0.1286 53.4846,0.1438 53.482,0.1475 53.4941,0.182 53.4612,0.1821 53.4525,0.2008 53.4362,0.187 53.4392,0.2124 53.4214,0.2055 53.4177,0.2284 53.4059,0.2386 53.3791,0.2738 53.3326,0.2892 53.3057,0.3185 53.2734,0.337 53.2407,0.3403 53.2216,0.3556 53.1921,0.3494 53.1341,0.3404 53.098,0.3282 53.0894,0.2996 53.0887,0.2485 53.0554,0.1975 53.0343,0.1563 53.0127,0.0959 52.962,0.0864 52.9582,0.0776 52.9324,0.0483 52.9195,0.0411 52.9053,0.0742 52.8943,0.1232 52.8898,0.1706 52.8758,0.1979 52.8394,0.2214 52.8185,0.2658 52.8101,0.2959 52.8169,0.3259 52.8151,0.3669 52.7907,0.3692 52.8036,0.3938 52.8299,0.4259 52.8357,0.431 52.846,0.444 52.8433,0.4454 52.8737,0.472 52.9088,0.4896 52.9474,0.5417 52.9759,0.5623 52.9766,0.5742 52.966,0.5901 52.9767,0.6179 52.9736,0.6608 52.9779,0.6625 52.9866,0.7014 52.987,0.7814 52.9767,0.8043 52.9726,0.8264 52.9779,0.8554 52.9687,0.8677 52.9795,0.9087 52.9624,1.0173 52.9626,1.0371 52.9677,1.14 52.9493,1.2512 52.9418,1.2955 52.934,1.3432 52.92,1.4065 52.8939,1.4634 52.8626,1.5513 52.8171,1.5913 52.7985,1.6392 52.7691,1.6754 52.7427,1.6993 52.7192,1.7266 52.669,1.7454 52.6265,1.7329 52.5552,1.7405 52.5321,1.763 52.4811,1.751 52.4736,1.733 52.4448,1.7281 52.4,1.6918 52.3487,1.6754 52.3136,1.6672 52.3116,1.6475 52.2984,1.6309 52.2705,1.6229 52.1894,1.6051 52.1584,1.5801 52.0864,1.5679 52.0806,1.4921 52.0584,1.469 52.0472,1.4507 52.0316,1.4313 52.0049,1.3924 51.9866,1.3686 51.9639,1.3449 51.9569,1.3195 51.9321,1.3161 51.951,1.2865 51.9615,1.2689 51.9546,1.238 51.9604,1.2197 51.9529,1.1873 51.9558,1.1639 51.9677,1.1306 51.9536,1.0862 51.9589,1.0646 51.9474,1.1194 51.94,1.1695 51.948,1.1883 51.9406,1.2317 51.94,1.2449 51.9482,1.2746 51.9394,1.2902 51.9497,1.2901 51.9388,1.2564 51.9132,1.2422 51.8864,1.2642 51.8862,1.2908 51.8742,1.29 51.8634,1.2423 51.8237,1.2183 51.8094,1.115 51.7732,1.0443 51.7696,1.033 51.7783,1.038 51.7892,1.0097 51.8009,0.9894 51.7875,0.9458 51.7747,0.9022 51.7744,0.8935 51.7693,0.8827 51.7577,0.8524 51.7416,0.8137 51.7385,0.7917 51.7447,0.7886 51.7367,0.7719 51.7419,0.7314 51.7282,0.7293 51.7154,0.751 51.7091,0.7886 51.7072,0.795 51.7185,0.8197 51.7211,0.8342 51.715,0.8753 51.7252,0.8995 51.7449,0.9307 51.747,0.9488 51.7341,0.9506 51.7223,0.9405 51.6988,0.9501 51.6835,0.9356 51.6504,0.9371 51.6362,0.9043 51.6224,0.8706 51.6191,0.8996 51.6139,0.9581 51.6197,0.9302 51.5928,0.8489 51.5515,0.8213 51.5407,0.7884 51.5223,0.7595 51.5279,0.6429 51.5408,0.6267 51.5322,0.637 51.5224,0.6165 51.5144,0.5731 51.5079,0.5533 51.5105,0.5399 51.5206,0.5248 51.5157,0.5409 51.5137,0.5082 51.5052,0.4609 51.507,0.4407 51.4923,0.4376 51.4674,0.4461 51.4614,0.4537 51.4622,0.4687 51.4828,0.4815 51.4872,0.5261 51.4842,0.5857 51.4844,0.6118 51.4788,0.66 51.4777,0.6714 51.4723,0.7032 51.4713,0.7204 51.4597,0.7232 51.4436,0.6999 51.4332,0.6779 51.4332,0.6556 51.4491,0.6325 51.4448,0.6188 51.4326,0.6242 51.4237,0.6107 51.4174,0.5673 51.4117,0.5379 51.4135,0.5576 51.3965,0.5931 51.3901,0.6163 51.3779,0.6208 51.3892,0.6346 51.3891,0.6272 51.3745,0.648 51.3976,0.6748 51.3758,0.6868 51.3917,0.7031 51.3926,0.6954 51.38,0.7192 51.3889,0.7018 51.3957,0.6963 51.4188,0.7281 51.4236,0.7169 51.4143,0.7259 51.3999,0.7629 51.3843,0.7645 51.3626,0.8061 51.36,0.8375 51.3538,0.8754 51.354,0.8971 51.3417,0.9499 51.3456,1.0083 51.35,1.0332 51.3656,1.0589 51.3656,1.099 51.3726,1.1474 51.373,1.2025 51.3799,1.2242 51.3793,1.2801 51.3782,1.3134 51.3806,1.3844 51.3926,1.4421 51.387,1.4496 51.3775,1.4423 51.35,1.4157 51.3239,1.3771 51.3296,1.3643 51.3131,1.4026 51.2388,1.4058 51.1867,1.3992 51.1622,1.3821 51.1442,1.3484 51.1332,1.3128 51.1144,1.2677 51.1017,1.2211 51.0981,1.1901 51.0773,1.0947 51.0676,1.0568 51.058,1.006 51.0312,0.9835 51.0122,0.9643 50.9692,0.9663 50.9518,0.9809 50.9145,0.949 50.9113,0.8548 50.9237,0.7881 50.9333,0.7498 50.9222,0.7185 50.9075,0.6586 50.8699,0.5919 50.8539,0.523 50.8484,0.5047 50.8435,0.4745 50.8368,0.4124 50.8302,0.3775 50.8203,0.3482 50.8086,0.3392 50.7992,0.3288 50.7849,0.3028 50.7752,0.2716 50.7525,0.258 50.7376,0.2099 50.7384,0.149 50.7589,0.1206 50.7586,0.0668 50.7825,0.0359 50.7812,-0.0382 50.7995,-0.1603 50.8223,-0.216 50.8276,-0.2586 50.8317,-0.3326 50.8173,-0.3637 50.81,-0.436 50.8032,-0.5414 50.8019,-0.6038 50.7911,-0.6471 50.7871,-0.7323 50.7698,-0.7526 50.7582,-0.7631 50.7729,-0.7807 50.7653,-0.7688 50.7602,-0.7631 50.7436,-0.7865 50.7225,-0.7999 50.7266,-0.8321 50.7484,-0.8674 50.7634,-0.902 50.7728,-0.9049 50.7823,-0.8783 50.8076,-0.8556 50.8099,-0.8923 50.8185,-0.8937 50.8381,-0.9161 50.8356,-0.9078 50.8169,-0.9116 50.8033,-0.9425 50.8153,-0.9319 50.844,-0.9709 50.8422,-0.977 50.8319,-0.951 50.824,-0.9576 50.7898,-0.9365 50.7782,-1.0216 50.7863,-1.0253 50.7954,-1.0004 50.7948,-0.9909 50.8019,-0.9777 50.8321,-1.0012 50.8437,-1.0217 50.8424,-1.0249 50.8264,-1.0434 50.8337,-1.0423 50.8069,-1.0304 50.7874,-1.0891 50.7777,-1.1088 50.7903,-1.1115 50.8064,-1.095 50.8313,-1.1172 50.843,-1.113 50.8361,-1.1538 50.8448,-1.1764 50.8394,-1.1507 50.8343,-1.142 50.8171,-1.1238 50.8062,-1.1119 50.7896,-1.1354 50.7748,-1.1848 50.7878,-1.2141 50.8094,-1.2462 50.8173,-1.2644 50.8268,-1.3019 50.8375,-1.3085 50.8603,-1.3012 50.8847,-1.3131 50.8731,-1.3124 50.8489,-1.3242 50.8529,-1.3651 50.88,-1.3872 50.8973,-1.3953 50.8831,-1.4035 50.8956,-1.4397 50.9082,-1.4509 50.9041,-1.4751 50.9203,-1.4651 50.9043,-1.4269 50.8968,-1.3882 50.8642,-1.3347 50.8378,-1.3395 50.827,-1.3231 50.8258,-1.3118 50.8135,-1.342 50.786,-1.3775 50.7854,-1.4192 50.7665,-1.4835 50.7561,-1.5286 50.7546,-1.5311 50.7371,-1.5495 50.7247,-1.5674 50.7225,-1.5536 50.706,-1.5833 50.7188,-1.6411 50.7322,-1.6925 50.7372,-1.7222 50.7347,-1.7407 50.7271,-1.7703 50.7277,-1.7587 50.7177,-1.7427 50.7215,-1.7411 50.7215,-1.7489 50.712,-1.8037 50.7205,-1.8616 50.718,-1.9009 50.7094,-1.9255 50.6976,-1.9666 50.7153,-1.9919 50.7125,-1.9841 50.7196,-1.9921 50.7333,-2.0118 50.7319,-1.9882 50.7077,-2.0131 50.7104,-2.0403 50.7204,-2.027 50.7294,-2.0426 50.7319,-2.0466 50.7164,-2.0629 50.7165,-2.0784 50.6887,-2.0657 50.6867,-2.0416 50.7064,-2.0245 50.6957,-2.0215 50.6814,-2.0018 50.6706,-1.9689 50.6616,-1.9499 50.6798,-1.9426 50.6704,-1.9523 50.6563,-1.9408 50.6407,-1.9244 50.6419,-1.9563 50.6179,-1.9442 50.6076,-1.9595 50.591,-2.0267 50.5889,-2.0577 50.5771,-2.0634 50.5932,-2.1049 50.5969,-2.1346 50.6126,-2.1828 50.6154,-2.1993 50.623,-2.2287 50.616,-2.2733 50.6222,-2.3242 50.6252,-2.3345 50.631,-2.3655 50.6311,-2.3955 50.6366,-2.4111 50.6341,-2.4382 50.6287,-2.4525 50.6141,-2.4434 50.607,-2.4662 50.5918,-2.4613 50.5716,-2.4283 50.5674,-2.4157 50.5491,-2.4566 50.5131,-2.4515 50.5623,-2.504 50.5966,-2.5923 50.6436,-2.636 50.6634,-2.7447 50.7042,-2.7931 50.718,-2.8103 50.7179,-2.8945 50.7328,-2.9122 50.7337,-2.9478 50.7183,-2.9838 50.7046,-3.0286 50.6986,-3.0799 50.7023,-3.096 50.6852,-3.1214 50.6869,-3.1933 50.6844,-3.2313 50.6793,-3.2669 50.6698,-3.3037 50.6298,-3.3342 50.6254,-3.3641 50.6098,-3.3854 50.6069,-3.4263 50.6177,-3.4158 50.6291,-3.4318 50.645,-3.4515 50.679,-3.4699 50.6822,-3.4655 50.6603,-3.4564 50.6561,-3.4463 50.6258,-3.4441 50.6026,-3.4284 50.6078,-3.464 50.5807,-3.4687 50.563,-3.5012 50.5393,-3.5092 50.5166,-3.5148 50.4817,-3.4904 50.4692,-3.4913 50.4582,-3.5188 50.4542,-3.5346 50.463,-3.552 50.4511,-3.5591 50.4334,-3.5561 50.4081,-3.529 50.4049,-3.5131 50.3965,-3.483 50.4001,-3.5079 50.3793,-3.5211 50.3588,-3.5147 50.3516,-3.5441 50.3354,-3.5649 50.3429,-3.5767 50.3251,-3.6077 50.32,-3.642 50.2905,-3.6589 50.2423,-3.6572 50.2309,-3.642 50.2232,-3.656 50.2178,-3.6806 50.2224,-3.7214 50.2019,-3.7359 50.2136,-3.7843 50.2257,-3.7848 50.2107,-3.823 50.2171,-3.8268 50.2229,-3.8713 50.2419,-3.8593 50.2422,-3.8582 50.261,-3.8791 50.2721,-3.8808 50.2846,-3.8952 50.2818,-3.9099 50.2943,-3.9454 50.2976,-3.9389 50.3148,-3.9638 50.3038,-3.9915 50.3075,-4.0191 50.2953,-4.0507 50.2943,-4.0744 50.3031,-4.0615 50.3133,-4.119 50.3193,-4.123 50.3467,-4.1303 50.3606,-4.1127 50.3548,-4.0993 50.3797,-4.1206 50.3613,-4.1854 50.3672,-4.1919 50.391,-4.2054 50.3995,-4.1875 50.4248,-4.1837 50.4327,-4.2062 50.4533,-4.1989 50.4362,-4.2102 50.4283,-4.212 50.3993,-4.2484 50.385,-4.2663 50.3872,-4.2773 50.3744,-4.2495 50.3762,-4.2303 50.3905,-4.2103 50.3923,-4.1929 50.3746,-4.2155 50.3667,-4.1942 50.3533,-4.1744 50.3604,-4.171 50.3437,-4.2008 50.3295,-4.1889 50.3175,-4.2268 50.314,-4.2195 50.3237,-4.2449 50.3421,-4.2827 50.3568,-4.3081 50.3614,-4.3673 50.3602,-4.3882 50.3646,-4.4367 50.361,-4.4524 50.3449,-4.4743 50.3329,-4.4974 50.3374,-4.5017 50.3307,-4.5499 50.3241,-4.5795 50.3323,-4.6019 50.3243,-4.639 50.3267,-4.6343 50.3349,-4.6726 50.3139,-4.6847 50.3202,-4.6819 50.3383,-4.6898 50.3463,-4.7524 50.3322,-4.7668 50.322,-4.7539 50.3059,-4.7808 50.29,-4.786 50.2622,-4.7671 50.2565,-4.7982 50.2302,-4.8041 50.2187,-4.8131 50.2298,-4.8553 50.2353,-4.8737 50.2312,-4.9214 50.1956,-4.9336 50.2071,-4.9578 50.202,-4.9736 50.1856,-4.9727 50.1641,-5.0098 50.1392,-5.0244 50.1549,-5.0172 50.1844,-5.0257 50.1822,-5.0346 50.2028,-5.0558 50.1953,-5.0738 50.1999,-5.0456 50.1758,-5.0532 50.163,-5.0808 50.1651,-5.0516 50.148,-5.0769 50.1401,-5.0937 50.1261,-5.0816 50.1105,-5.1015 50.0996,-5.1672 50.0966,-5.1052 50.0946,-5.0749 50.0816,-5.079 50.0683,-5.0618 50.0617,-5.0689 50.035,-5.097 50.0261,-5.1017 50.0042,-5.1226 50.0091,-5.1666 50.0038,-5.1704 49.991,-5.1988 49.9589,-5.2157 49.9595,-5.2207 49.9719,-5.2469 49.977,-5.2449 49.9851,-5.2685 50.0046,-5.2559 50.0216,-5.2621 50.0344,-5.28 50.0418,-5.2784 50.0549,-5.3283 50.0888,-5.3618 50.0889,-5.393 50.1036,-5.4294 50.0975,-5.4295 50.1056,-5.4665 50.1235,-5.4962 50.1287,-5.524 50.1261,-5.5493 50.1032,-5.5336 50.0892,-5.5545 50.0599,-5.5778 50.0517,-5.6234 50.05,-5.6793 50.035,-5.7164 50.0663,-5.6886 50.0904,-5.6975 50.0989,-5.7052 50.1343,-5.6896 50.1522,-5.6514 50.1682,-5.6291 50.1677,-5.5991 50.1907,-5.5655 50.1996,-5.5385 50.2162,-5.4957 50.2194,-5.4692 50.2002,-5.4368 50.1934,-5.4412 50.1782,-5.4103 50.1918,-5.4344 50.1922,-5.3917 50.2287,-5.3963 50.2398,-5.3452 50.2379,-5.3139 50.2507,-5.301 50.2628,-5.2512 50.2817,-5.2339 50.3049,-5.2358 50.3183,-5.2044 50.3221,-5.1802 50.3344,-5.1814 50.3404,-5.1557 50.3475,-5.1466 50.3753,-5.1554 50.3789,-5.1355 50.4088,-5.1014 50.4136,-5.0941 50.4208,-5.0772 50.4157,-5.0592 50.424,-5.0394 50.4531,-5.0352 50.4942,-5.0451 50.4966,-5.0226 50.5266,-5.0251 50.5514,-5.0031 50.5413,-4.9836 50.5426,-4.9723 50.5576,-4.9448 50.5685,-4.9481 50.5553,-4.9341 50.5462,-4.9346 50.5329,-4.8998 50.5263,-4.8553 50.5289,-4.8518 50.5334,-4.8988 50.5308,-4.9258 50.5447,-4.9309 50.5648,-4.9156 50.5759,-4.9348 50.5862,-4.9212 50.5914,-4.8892 50.5823,-4.87 50.5954,-4.8213 50.5943,-4.7959 50.5983,-4.7776 50.614,-4.763 50.6707,-4.7321 50.6734,-4.7231 50.6853,-4.6552 50.7154,-4.652 50.7393,-4.6198 50.7514,-4.6139 50.7603,-4.5903 50.7663,-4.5627 50.7811,-4.557 50.7987,-4.5575 50.8287,-4.5519 50.8295,-4.5595 50.8791,-4.5672 50.8852,-4.5634 50.9151,-4.546 50.9284)),((0.7494 51.446,0.7913 51.4394,0.8142 51.4284,0.903 51.416,0.9382 51.3898,0.951 51.3735,0.908 51.3554,0.8896 51.3552,0.8683 51.3651,0.8365 51.3646,0.7904 51.373,0.7732 51.3678,0.7689 51.3813,0.7341 51.3998,0.7225 51.4146,0.7406 51.4112,0.7364 51.4294,0.7494 51.446)),((0.6849 51.4123,0.6954 51.3977,0.6679 51.4093,0.6849 51.4123)),((-0.5564 53.6905,-0.5228 53.6849,-0.5358 53.6813,-0.5564 53.6905)),((-1.3025 50.7668,-1.2965 50.7607,-1.2719 50.7657,-1.2402 50.744,-1.2108 50.735,-1.1598 50.7335,-1.1096 50.7215,-1.0936 50.6958,-1.0699 50.6837,-1.0965 50.6705,-1.1376 50.6606,-1.167 50.643,-1.1789 50.601,-1.242 50.5829,-1.2949 50.5749,-1.3178 50.5892,-1.3612 50.6094,-1.3893 50.6268,-1.4473 50.6435,-1.4849 50.6669,-1.5238 50.668,-1.5793 50.6602,-1.5703 50.6727,-1.5468 50.6794,-1.5342 50.7,-1.522 50.7072,-1.47 50.7097,-1.4253 50.7268,-1.4121 50.7168,-1.394 50.7176,-1.4099 50.7256,-1.3542 50.7387,-1.3453 50.7503,-1.3139 50.7673,-1.3025 50.7668)),((-1.7976 55.6873,-1.7791 55.6855,-1.7785 55.6679,-1.8024 55.6683,-1.8066 55.6787,-1.8267 55.6847,-1.7976 55.6873)),((-1.965 50.6948,-1.9605 50.6864,-1.9881 50.6924,-1.965 50.6948)),((-2.979 54.1466,-2.9848 54.1371,-3.0171 54.1335,-2.9989 54.1527,-2.979 54.1466)),((-3.2636 54.1465,-3.2645 54.1478,-3.2524 54.1504,-3.2636 54.1465)),((-3.2636 54.1465,-3.2561 54.1352,-3.2389 54.0876,-3.2238 54.0799,-3.2234 54.0677,-3.2102 54.0651,-3.1961 54.0487,-3.1785 54.0553,-3.1731 54.0471,-3.2097 54.0475,-3.2473 54.0822,-3.2689 54.1084,-3.2767 54.1418,-3.2636 54.1465)),((-4.6761 51.2016,-4.6703 51.201,-4.6617 51.1671,-4.6711 51.1585,-4.6806 51.175,-4.6732 51.1818,-4.6761 51.2016)),((-6.2924 49.9801,-6.2904 49.9675,-6.2618 49.9628,-6.2852 49.9566,-6.305 49.9665,-6.2924 49.9801)),((-6.2993 49.9373,-6.2758 49.9228,-6.304 49.9029,-6.3219 49.9171,-6.2993 49.9373)),((-6.3442 49.968,-6.3192 49.9532,-6.3205 49.9441,-6.3391 49.9465,-6.3442 49.968)),((-6.3349 49.8981,-6.3413 49.8828,-6.349 49.8983,-6.3349 49.8981)),((-6.3587 49.9664,-6.3481 49.9556,-6.359 49.9464,-6.3587 49.9664)))&quot;</value>
+                                  <value>52.159999999999997</value>
+                                  <value>-0.69999999999999996</value>
+                                </tuple>
+                              </tuple-reference>
+                            </tuple-selection>
+                          </selection-collection>
+                        </worksheet>
+                      </capturedDeltas>
+                    </story-point>
+                    <story-point caption='Customers in Scotland are in their late 40s and early 50s' captured-sheet='Dashboard' id='3'>
+                      <capturedDeltas>
+                        <worksheet name='Distribution by Age'>
+                          <annotations>
+                            <annotation class='point' delta-type='added' id='0' mark-position='1' pullback='12' text-width='269'>
+                              <formatted-text>
+                                <run bold='true' fontsize='9'>High Representation of Customers in early 50s</run>
+                              </formatted-text>
+                              <point>
+                                <visual-coordinate class='mark'>
+                                  <tuple-reference>
+                                    <tuple-descriptor>
+                                      <pane-descriptor>
+                                        <x-fields>
+                                          <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Age (bin):ok]</field>
+                                        </x-fields>
+                                        <y-fields>
+                                          <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</field>
+                                        </y-fields>
+                                      </pane-descriptor>
+                                      <columns>
+                                        <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</field>
+                                        <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Age (bin):ok]</field>
+                                        <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[pcto:cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</field>
+                                      </columns>
+                                    </tuple-descriptor>
+                                    <tuple>
+                                      <value>159</value>
+                                      <value>9</value>
+                                      <value>0.15742574257425743</value>
+                                    </tuple>
+                                  </tuple-reference>
+                                </visual-coordinate>
+                              </point>
+                              <body x='85' y='-20' />
+                            </annotation>
+                          </annotations>
+                          <style delta-type='added'>
+                            <style-rule element='annotation'>
+                              <format attr='fill-color' id='addedDelta_annotation_0' value='#fafafab9' />
+                            </style-rule>
+                          </style>
+                        </worksheet>
+                        <worksheet name='Distribution by Balance'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Gender'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Job Classification'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Map'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                      </capturedDeltas>
+                    </story-point>
+                    <story-point caption='Wales has a higher representation in mid size Balances' captured-sheet='Dashboard' id='4'>
+                      <capturedDeltas>
+                        <worksheet name='Distribution by Age'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;Wales&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Distribution by Balance'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;Wales&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Gender'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;Wales&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Job Classification'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Region)]'>
+                            <groupfilter function='member' level='[Region]' member='&quot;Wales&quot;' user:ui-action-filter='[Action1_69E8820DB9B7413E9F0BFB2A2880AD32]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Map'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                          <selection-collection>
+                            <tuple-selection>
+                              <tuple-reference>
+                                <tuple-descriptor>
+                                  <pane-descriptor>
+                                    <x-fields>
+                                      <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Longitude (generated)]</field>
+                                    </x-fields>
+                                    <y-fields>
+                                      <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Latitude (generated)]</field>
+                                    </y-fields>
+                                  </pane-descriptor>
+                                  <columns>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Geometry (generated)]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Latitude (generated)]</field>
+                                    <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[Longitude (generated)]</field>
+                                  </columns>
+                                </tuple-descriptor>
+                                <tuple>
+                                  <value>95</value>
+                                  <value>&quot;Wales&quot;</value>
+                                  <value>&quot;MULTIPOLYGON(((-4.6889 52.1163,-4.6861 52.1304,-4.6726 52.129,-4.6433 52.1382,-4.5876 52.1375,-4.5692 52.1444,-4.5473 52.1355,-4.5201 52.1357,-4.4071 52.1919,-4.3788 52.2145,-4.3646 52.2193,-4.3534 52.2119,-4.3131 52.2189,-4.2569 52.2491,-4.2353 52.2521,-4.2083 52.2644,-4.1855 52.2921,-4.1689 52.2976,-4.1274 52.3397,-4.1138 52.3738,-4.0903 52.3982,-4.0796 52.4515,-4.062 52.4777,-4.0539 52.4807,-4.063 52.5281,-4.0554 52.5365,-4.042 52.5275,-4.0111 52.5281,-3.9666 52.5445,-3.9631 52.5552,-3.986 52.5548,-4.0141 52.5473,-4.069 52.5426,-4.1045 52.5885,-4.1285 52.6134,-4.1147 52.644,-4.0939 52.669,-4.057 52.6879,-4.0602 52.7205,-4.0814 52.7479,-4.1502 52.8076,-4.1471 52.819,-4.1197 52.8256,-4.1269 52.8351,-4.1189 52.8466,-4.1437 52.8804,-4.1479 52.8962,-4.1158 52.8953,-4.0911 52.9016,-4.06 52.9189,-4.0779 52.922,-4.1029 52.909,-4.1085 52.9177,-4.1297 52.9237,-4.1349 52.914,-4.167 52.9056,-4.2188 52.9191,-4.2668 52.9102,-4.313 52.9091,-4.3254 52.8925,-4.3751 52.8964,-4.394 52.8945,-4.399 52.8816,-4.4291 52.8787,-4.4598 52.8703,-4.4789 52.8533,-4.4741 52.8458,-4.5019 52.8309,-4.5014 52.8154,-4.4829 52.8037,-4.4917 52.7909,-4.5148 52.793,-4.5279 52.7778,-4.5426 52.7865,-4.5361 52.7999,-4.5891 52.8231,-4.6113 52.8245,-4.6246 52.8096,-4.6427 52.8002,-4.6613 52.8062,-4.6924 52.7951,-4.721 52.8028,-4.7324 52.7818,-4.7557 52.7879,-4.7678 52.7975,-4.7511 52.8071,-4.7516 52.8157,-4.7222 52.8369,-4.7265 52.8532,-4.6965 52.8593,-4.69 52.8743,-4.6682 52.8791,-4.6665 52.8899,-4.6487 52.9066,-4.6336 52.9055,-4.6169 52.9228,-4.5947 52.9267,-4.5676 52.9437,-4.5624 52.9382,-4.5289 52.9374,-4.4737 52.9659,-4.4614 52.9816,-4.4367 52.9983,-4.4127 52.9973,-4.3535 53.0335,-4.3389 53.0539,-4.3363 53.0826,-4.3473 53.1131,-4.3338 53.114,-4.3207 53.0991,-4.3116 53.1054,-4.3074 53.1304,-4.2791 53.1393,-4.2578 53.1611,-4.2082 53.1873,-4.2095 53.2017,-4.195 53.2125,-4.1631 53.2189,-4.1225 53.2372,-4.1156 53.2316,-4.0941 53.2359,-4.0825 53.2283,-4.0304 53.2378,-4.0068 53.247,-4.0016 53.2528,-3.9499 53.2672,-3.9326 53.269,-3.8804 53.2895,-3.8643 53.288,-3.845 53.2965,-3.8247 53.2807,-3.821 53.2882,-3.8382 53.2957,-3.846 53.3202,-3.8772 53.3327,-3.8686 53.3428,-3.8341 53.3383,-3.8187 53.3228,-3.7813 53.3283,-3.7642 53.3186,-3.7391 53.3142,-3.7264 53.2976,-3.6944 53.2932,-3.6344 53.2946,-3.6011 53.2916,-3.5575 53.302,-3.5129 53.3167,-3.5076 53.3147,-3.4806 53.3283,-3.447 53.3332,-3.4094 53.3436,-3.3635 53.3521,-3.3119 53.3562,-3.3036 53.3349,-3.208 53.2964,-3.1229 53.2488,-3.0713 53.2328,-3.0707 53.2446,-3.0983 53.2497,-3.0833 53.2561,-3.0786 53.252,-3.0691 53.253,-3.0361 53.2518,-3.0259 53.2484,-2.993 53.2332,-2.9662 53.2187,-2.9492 53.2111,-2.9376 53.1979,-2.9223 53.1893,-2.921 53.1771,-2.9278 53.1714,-2.944 53.1652,-2.9466 53.1671,-2.9709 53.1608,-2.9815 53.1563,-2.9846 53.1586,-2.9951 53.1542,-2.9846 53.1478,-2.9795 53.1506,-2.9639 53.1328,-2.9465 53.1269,-2.945 53.1223,-2.9344 53.1215,-2.9173 53.1148,-2.9034 53.1118,-2.8923 53.1184,-2.881 53.1213,-2.8838 53.1115,-2.8911 53.1095,-2.8873 53.1046,-2.8933 53.0963,-2.8993 53.098,-2.9009 53.0908,-2.8759 53.0816,-2.8808 53.074,-2.8615 53.0608,-2.8725 53.0587,-2.8593 53.0543,-2.8701 53.0454,-2.8557 53.0373,-2.8605 53.028,-2.8586 53.0198,-2.8479 53.019,-2.8378 53.0106,-2.838 53.0029,-2.8324 52.9966,-2.7993 52.9896,-2.7899 52.9957,-2.7796 52.9934,-2.7682 52.9948,-2.7585 52.9861,-2.7457 52.9871,-2.7268 52.9833,-2.7353 52.97,-2.7266 52.9649,-2.7279 52.9536,-2.7257 52.9405,-2.7283 52.9252,-2.7554 52.9246,-2.7901 52.9033,-2.8005 52.8955,-2.8134 52.9151,-2.8384 52.9322,-2.8402 52.9419,-2.8837 52.9467,-2.8875 52.9525,-2.8965 52.9509,-2.9087 52.942,-2.9189 52.9436,-2.9273 52.9388,-2.9598 52.9512,-2.9618 52.9557,-2.9728 52.9605,-2.9685 52.9642,-2.975 52.969,-2.982 52.9592,-2.9904 52.9598,-3.0097 52.9562,-3.0315 52.9314,-3.0412 52.9279,-3.0615 52.9291,-3.0764 52.9255,-3.096 52.9303,-3.1097 52.9183,-3.1168 52.8994,-3.1136 52.8946,-3.1376 52.8949,-3.1475 52.8901,-3.1363 52.8862,-3.1468 52.8846,-3.1525 52.8797,-3.1277 52.8673,-3.1344 52.8618,-3.1539 52.8543,-3.1631 52.8475,-3.1513 52.8426,-3.1584 52.8302,-3.1678 52.8193,-3.1684 52.808,-3.1614 52.8036,-3.1563 52.808,-3.1541 52.8025,-3.162 52.7988,-3.1585 52.7935,-3.1311 52.7875,-3.1122 52.7858,-3.1062 52.7929,-3.0977 52.7914,-3.0902 52.7963,-3.0858 52.7903,-3.0915 52.7859,-3.0889 52.7776,-3.0807 52.7775,-3.0795 52.7716,-3.0695 52.7742,-3.0611 52.7694,-3.0573 52.7738,-3.0472 52.7671,-3.039 52.7704,-3.0221 52.7645,-3.0186 52.7675,-3.0106 52.7615,-3.0146 52.7528,-2.9978 52.7439,-2.991 52.7431,-2.9965 52.736,-2.9831 52.7334,-2.9711 52.7354,-2.965 52.7322,-2.9615 52.7156,-2.9781 52.7153,-2.9773 52.7263,-3.0005 52.7202,-3.0084 52.722,-3.0234 52.7198,-3.0225 52.7067,-3.032 52.6999,-3.0361 52.6925,-3.047 52.6912,-3.0427 52.6869,-3.0456 52.6754,-3.0385 52.6753,-3.0486 52.663,-3.0449 52.6559,-3.0511 52.6473,-3.0703 52.6457,-3.0817 52.6411,-3.0697 52.6375,-3.0598 52.6307,-3.0731 52.629,-3.0808 52.6224,-3.0827 52.6156,-3.0936 52.6093,-3.0894 52.5996,-3.1003 52.5976,-3.1192 52.5858,-3.1393 52.586,-3.1378 52.5739,-3.1274 52.566,-3.1115 52.5414,-3.117 52.5384,-3.1372 52.5339,-3.135 52.5285,-3.1084 52.5293,-3.083 52.5359,-3.0834 52.5415,-3.0939 52.5449,-3.0873 52.5513,-3.0604 52.5553,-3.05 52.5607,-3.0366 52.5717,-3.0145 52.5755,-3.0066 52.5739,-2.9977 52.5636,-2.9978 52.548,-3.0051 52.5295,-3.0038 52.5198,-3.0324 52.5237,-3.0366 52.5132,-3.0292 52.5013,-3.0443 52.5001,-3.0898 52.4992,-3.0966 52.496,-3.1125 52.4977,-3.1285 52.492,-3.1391 52.4918,-3.1578 52.4851,-3.1815 52.474,-3.1946 52.4764,-3.212 52.4681,-3.2184 52.4609,-3.2333 52.4513,-3.2356 52.4426,-3.2285 52.4396,-3.2308 52.4303,-3.2217 52.4221,-3.2091 52.4192,-3.1734 52.4071,-3.161 52.4,-3.162 52.3936,-3.1545 52.3877,-3.1319 52.3854,-3.1251 52.3809,-3.1049 52.3758,-3.0957 52.3641,-3.0845 52.3589,-3.0674 52.3575,-3.0543 52.3478,-3.0415 52.3442,-3.0275 52.3451,-3.0178 52.3489,-3.0045 52.3489,-2.9728 52.3541,-2.9704 52.3514,-2.9571 52.3524,-2.9549 52.3493,-2.9668 52.3295,-2.986 52.3235,-2.9971 52.3245,-3.0038 52.3116,-3.0006 52.3044,-3.0047 52.2917,-3.012 52.288,-3.0126 52.2793,-2.9943 52.2733,-2.9668 52.2738,-2.956 52.2709,-2.9651 52.2681,-2.9645 52.2628,-2.9775 52.2598,-3.0056 52.2642,-3.0207 52.2601,-3.0483 52.245,-3.0443 52.2379,-3.0635 52.2367,-3.0724 52.2319,-3.0721 52.2229,-3.0772 52.2132,-3.1 52.2022,-3.0964 52.1947,-3.0964 52.1809,-3.1125 52.1736,-3.1224 52.1634,-3.0989 52.1547,-3.0844 52.1631,-3.0725 52.1558,-3.0937 52.1443,-3.1154 52.1392,-3.136 52.1378,-3.1412 52.1299,-3.1368 52.1233,-3.1278 52.1245,-3.1067 52.1187,-3.1059 52.1051,-3.1227 52.1032,-3.1189 52.0888,-3.126 52.0783,-3.1163 52.0658,-3.1115 52.0649,-3.0908 52.0508,-3.0863 52.0402,-3.0992 52.0227,-3.087 52.014,-3.0842 52.0044,-3.0697 51.9898,-3.0674 51.9831,-3.0571 51.9754,-3.0414 51.9677,-3.0353 51.9597,-3.0259 51.9573,-3.0222 51.9509,-3.0085 51.938,-3.0081 51.9271,-2.9992 51.9235,-2.9767 51.9275,-2.9712 51.9134,-2.9753 51.9097,-2.9684 51.9045,-2.9426 51.9094,-2.9338 51.9151,-2.9274 51.914,-2.9082 51.9212,-2.901 51.9258,-2.887 51.9282,-2.8885 51.9336,-2.8757 51.9332,-2.8694 51.9269,-2.8589 51.9277,-2.8464 51.92,-2.8624 51.9175,-2.8621 51.9141,-2.8419 51.9177,-2.8364 51.9063,-2.8208 51.9052,-2.8143 51.898,-2.8025 51.8911,-2.7686 51.8801,-2.7769 51.8733,-2.778 51.865,-2.7689 51.8609,-2.7568 51.846,-2.7403 51.8416,-2.7388 51.8367,-2.7276 51.8401,-2.7197 51.8488,-2.7161 51.8407,-2.7066 51.84,-2.7051 51.8457,-2.6973 51.8448,-2.6934 51.8339,-2.687 51.8331,-2.6829 51.8385,-2.659 51.8333,-2.6575 51.8274,-2.6502 51.8261,-2.6609 51.8228,-2.6595 51.8107,-2.6726 51.8089,-2.6783 51.8033,-2.6696 51.7944,-2.6759 51.7881,-2.6751 51.7767,-2.6804 51.7685,-2.6725 51.7593,-2.6629 51.753,-2.6726 51.736,-2.6859 51.732,-2.6805 51.7241,-2.6793 51.714,-2.6693 51.7074,-2.6702 51.701,-2.6809 51.7033,-2.6833 51.7001,-2.6699 51.6942,-2.6713 51.6802,-2.6568 51.6743,-2.6601 51.6711,-2.6847 51.668,-2.6863 51.6624,-2.6799 51.6597,-2.666 51.6627,-2.6798 51.6488,-2.6687 51.6456,-2.6685 51.6338,-2.6569 51.6232,-2.66 51.6182,-2.6941 51.5991,-2.7129 51.5823,-2.7564 51.5787,-2.8216 51.5541,-2.8458 51.543,-2.8745 51.5374,-2.886 51.5283,-2.9439 51.5317,-2.9772 51.5421,-2.9735 51.5542,-2.9901 51.5484,-2.9985 51.5209,-3.0774 51.4943,-3.1162 51.4757,-3.1521 51.4477,-3.1606 51.4604,-3.1755 51.4593,-3.1741 51.4466,-3.1624 51.4409,-3.1679 51.4056,-3.1847 51.3991,-3.2242 51.4016,-3.2783 51.3849,-3.3087 51.3917,-3.3429 51.3805,-3.3577 51.3832,-3.4101 51.3794,-3.418 51.3842,-3.4733 51.3926,-3.5055 51.3936,-3.5227 51.3992,-3.5598 51.3999,-3.5924 51.4335,-3.649 51.4689,-3.6728 51.4764,-3.7027 51.4726,-3.7211 51.4789,-3.7475 51.5006,-3.7696 51.5355,-3.7919 51.5662,-3.8109 51.5706,-3.813 51.5859,-3.8447 51.6041,-3.8705 51.6023,-3.8893 51.6105,-3.9156 51.6057,-3.954 51.6085,-3.9689 51.6016,-3.9864 51.5731,-3.9691 51.5657,-3.9937 51.5628,-4.036 51.5678,-4.0633 51.5567,-4.1177 51.5684,-4.1542 51.5584,-4.145 51.5445,-4.1995 51.5461,-4.2022 51.5374,-4.2364 51.5413,-4.2595 51.5531,-4.3114 51.5617,-4.297 51.5725,-4.2992 51.5909,-4.3157 51.6099,-4.2662 51.6294,-4.2563 51.6538,-4.2323 51.6622,-4.2346 51.6713,-4.2082 51.678,-4.245 51.6779,-4.2693 51.6639,-4.2886 51.6597,-4.3399 51.6745,-4.3719 51.6973,-4.4201 51.7108,-4.4402 51.7095,-4.437 51.7217,-4.397 51.7329,-4.4189 51.7387,-4.4559 51.7252,-4.48 51.724,-4.521 51.733,-4.5642 51.7375,-4.5792 51.7333,-4.6328 51.733,-4.6813 51.7227,-4.6938 51.7082,-4.677 51.6972,-4.6998 51.6768,-4.6928 51.6709,-4.7144 51.6526,-4.7513 51.6538,-4.7562 51.6439,-4.7808 51.6364,-4.856 51.6466,-4.8613 51.6386,-4.8959 51.6285,-4.9081 51.6119,-4.9304 51.5986,-4.9446 51.597,-4.975 51.6092,-5.0019 51.6105,-5.0594 51.6205,-5.0532 51.6389,-5.0712 51.6641,-5.1079 51.6688,-5.1259 51.6809,-5.1097 51.6925,-5.0796 51.6898,-5.0685 51.6791,-5.0559 51.6809,-5.0515 51.6939,-5.0357 51.6951,-4.9693 51.6887,-4.9431 51.7041,-4.9834 51.6991,-5.034 51.7108,-5.0862 51.7062,-5.0962 51.7193,-5.1181 51.7107,-5.1673 51.713,-5.1526 51.7041,-5.1567 51.688,-5.1759 51.6798,-5.1893 51.6896,-5.191 51.7089,-5.23 51.7235,-5.254 51.7377,-5.2088 51.7346,-5.1936 51.7565,-5.1861 51.7536,-5.1608 51.772,-5.118 51.7688,-5.1048 51.7904,-5.1157 51.8353,-5.1363 51.8626,-5.1815 51.8611,-5.1798 51.8662,-5.2119 51.8669,-5.2161 51.8721,-5.2456 51.8726,-5.32 51.8611,-5.3076 51.8766,-5.3164 51.8844,-5.3003 51.8907,-5.3146 51.9019,-5.2911 51.9137,-5.2537 51.9167,-5.2286 51.9309,-5.2129 51.9322,-5.1937 51.9508,-5.154 51.9483,-5.1427 51.9623,-5.1067 51.9615,-5.0855 51.9684,-5.0824 51.9872,-5.0953 51.9933,-5.0726 52.0042,-5.0885 52.0147,-5.0722 52.0303,-4.9869 52.0232,-4.987 51.999,-4.9362 52.0067,-4.9128 52.0192,-4.9112 52.0347,-4.8941 52.0241,-4.8695 52.0198,-4.8379 52.0206,-4.8479 52.0376,-4.8383 52.0503,-4.7994 52.057,-4.7774 52.0667,-4.7448 52.0957,-4.7494 52.1037,-4.7315 52.1179,-4.707 52.1077,-4.6889 52.1163)),((-4.4237 53.4294,-4.3677 53.4239,-4.3564 53.4143,-4.3386 53.4196,-4.2902 53.4117,-4.274 53.4023,-4.2702 53.3866,-4.2902 53.3685,-4.2737 53.3752,-4.2647 53.3608,-4.2304 53.356,-4.219 53.3191,-4.2041 53.313,-4.2145 53.2987,-4.2013 53.2954,-4.1721 53.3031,-4.1435 53.3053,-4.1197 53.3192,-4.0715 53.3122,-4.0413 53.3116,-4.0855 53.2755,-4.0866 53.2642,-4.1432 53.2371,-4.1579 53.2331,-4.1619 53.2221,-4.1783 53.2237,-4.2048 53.2139,-4.216 53.1896,-4.245 53.1792,-4.2989 53.1486,-4.3359 53.1456,-4.3464 53.1356,-4.3295 53.1267,-4.3584 53.1315,-4.3834 53.1424,-4.4076 53.1443,-4.4197 53.164,-4.3873 53.1694,-4.3851 53.192,-4.4114 53.1784,-4.4282 53.1607,-4.441 53.1594,-4.4653 53.1834,-4.4877 53.1771,-4.5046 53.1867,-4.4983 53.2079,-4.5223 53.2321,-4.5555 53.2497,-4.5499 53.2545,-4.5689 53.2726,-4.5985 53.2865,-4.5971 53.275,-4.5577 53.2526,-4.5648 53.2444,-4.5978 53.2408,-4.6146 53.2485,-4.6099 53.2562,-4.6256 53.2693,-4.6195 53.2802,-4.6414 53.2849,-4.6827 53.2818,-4.6792 53.2935,-4.6967 53.3074,-4.646 53.3231,-4.6134 53.3079,-4.5974 53.3058,-4.5757 53.2879,-4.5608 53.296,-4.5612 53.3139,-4.5843 53.3315,-4.5695 53.3375,-4.567 53.3572,-4.5552 53.3745,-4.5722 53.3918,-4.5703 53.4052,-4.528 53.4071,-4.4874 53.413,-4.4756 53.4185,-4.4474 53.4152,-4.4491 53.4239,-4.4237 53.4294)),((-4.7126 51.6434,-4.6822 51.6422,-4.685 51.6298,-4.7126 51.6434)),((-5.3019 51.7466,-5.2687 51.7352,-5.2917 51.7282,-5.3149 51.7373,-5.3019 51.7466)),((-5.3355 51.8774,-5.3321 51.8522,-5.3502 51.8578,-5.3488 51.8755,-5.3355 51.8774)))&quot;</value>
+                                  <value>52.5</value>
+                                  <value>-3.5</value>
+                                </tuple>
+                              </tuple-reference>
+                            </tuple-selection>
+                          </selection-collection>
+                        </worksheet>
+                        <datasource name='Parameters'>
+                          <column name='[Parameter 1]' value='15000' />
+                        </datasource>
+                      </capturedDeltas>
+                    </story-point>
+                    <story-point caption='Northern Ireland is mostly represented by females' captured-sheet='Dashboard' id='5'>
+                      <capturedDeltas>
+                        <worksheet name='Distribution by Balance'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Gender'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Job Classification'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <worksheet name='Map'>
+                          <filter class='categorical' column='[federated.08nrtv605fj5rl148n7zl07p9l9b].[Action (Age (bin))]'>
+                            <groupfilter function='level-members' level='[Age (bin)]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                          </filter>
+                        </worksheet>
+                        <datasource name='Parameters'>
+                          <column name='[Parameter 1]' value='15000' />
+                        </datasource>
+                      </capturedDeltas>
+                    </story-point>
+                  </story-points>
+                </flipboard>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{D9684B5D-F650-4CBA-AEC9-93D6C6F6704B}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='Story'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{914C7D6B-7763-45B0-8E3C-33EF1696D918}' />
+    </window>
+    <window class='dashboard' hidden='true' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='Distribution by Age'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribution by Balance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Gender'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Job Classification'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{66B79517-61D3-42C5-B19B-B5A7B701ED5C}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Distribution by Age'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' type='color' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Age (bin):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4F7399AD-4B80-4116-A6ED-B39CB4E4CAF8}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Distribution by Balance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' type='color' />
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Balance (bin):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{524CBAA0-30A6-4038-BECF-E3417913CB45}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Gender:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[__tableau_internal_object_id__].[cnt:P1-UK-Bank-Customers.csv_48B86BD550E9477B86684D87B553667D:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Gender:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{099E0A25-7A78-4040-BEA3-50A842E6516E}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Job Classification'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Job Classification:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Job Classification:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4D43EC28-F05B-4538-9428-BF0455825B4E}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08nrtv605fj5rl148n7zl07p9l9b].[none:Region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{88BCB92B-7AE1-420A-A77B-B22AA2C7FD36}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Story' width='192'>
+      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
+      ONnuAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
