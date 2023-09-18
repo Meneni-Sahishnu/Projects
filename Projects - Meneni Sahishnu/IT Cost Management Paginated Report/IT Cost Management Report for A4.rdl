@@ -4,18 +4,6 @@
   <rd:ReportID>da66bcb6-f4da-42dd-9aa0-59b8ffad4b1a</rd:ReportID>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
-  <DataSources>
-    <DataSource Name="PaginatedReportsWorkspace_ITCostManagementReportDataset">
-      <rd:SecurityType>None</rd:SecurityType>
-      <ConnectionProperties>
-        <DataProvider>PBIDATASET</DataProvider>
-        <ConnectString>Data Source=pbiazure://api.powerbi.com/;Identity Provider="https://login.microsoftonline.com/common, https://analysis.windows.net/powerbi/api, f0b72488-7082-488a-a7e8-eada97bd842d";Initial Catalog=sobe_wowvirtualserver-8bb4320e-a8bc-4549-8bda-83ba76ef544d;Integrated Security=ClaimsToken</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>5592fbae-cba5-45c3-bd65-18841ef83649</rd:DataSourceID>
-      <rd:PowerBIWorkspaceName>Paginated Reports Workspace</rd:PowerBIWorkspaceName>
-      <rd:PowerBIDatasetName>IT Cost Management Report - Dataset</rd:PowerBIDatasetName>
-    </DataSource>
-  </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
